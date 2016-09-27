@@ -90,7 +90,8 @@ object TestServer extends App {
         }
       }
     } ~ 
-    pathPrefix("inner")(getFromResourceDirectory("someDir"))
+    pathPrefix("inner")(getFromResourceDirectory("someDir")) ~
+    pathPrefix("dir")(getFromDirectory("/some/directory/i/only/want/to/share"))
   }
   // format: ON
 
